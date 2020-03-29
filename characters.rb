@@ -16,6 +16,7 @@ class Character
     @portrayed = portrayed
     @url = url
     @@all << self
+  end
   
   def self.all
     @@all

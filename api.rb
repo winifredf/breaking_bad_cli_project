@@ -10,5 +10,4 @@ characters_array = characters_hash
 
 characters_array.each do |char|
   character.new(char[:char_id], char[:name], char[:birthday], char[:occupation], char[:img], char[:status], char[:appearance], char[:nickname], char[:portrayed], char[:url])
-  
 end
