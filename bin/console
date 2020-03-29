@@ -2,6 +2,10 @@
 
 require "bundler/setup"
 require "breaking_bad_cli_project"
+require 'pry'
+require 'rest-client'
+require 'json'
+require_relative 'characters.rb'
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
