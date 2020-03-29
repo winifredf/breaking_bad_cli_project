@@ -5,6 +5,7 @@ require 'rest-client'
 require 'json'
 require_relative '../lib/characters.rb'
 require_relative '../lib/api.rb'
+require_relative '../lib/cli'
 
 
 
@@ -15,6 +16,5 @@ require "breaking_bad_cli_project"
 
 require 'json'
 
-require_relative '..lib/cli'
 
 CLI.new.call
