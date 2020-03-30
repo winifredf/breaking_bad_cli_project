@@ -2,23 +2,46 @@ class CLI
   def call
     API.new.call_api
     puts "Welcome to the Breaking Bad Character Finder!"
-    input = gets.strip.to_i
+    list_characters
     choose_a_character
-    list_characters(input)
-    
+
+  
   end
   
   def choose_a_character
     puts ""
-    puts "Please choose a character for additional information."
-    input = gets.strip.to_i
+    input = gets.strip.to_i-1
+    char = Character.find(input)
+    character_details(char)
+    
+    
   end
   
-  def list_characters(input)
-    Character.all.each.with_index (1) do |char, index|
+  def list_characters
+    puts ""
+    puts "Please choose a number."
+    puts ""
+    Character.all.each.with_index(1) do |char, index|
       puts "#{index}. #{char.name}"
-      
     end
+    puts ""
+    puts "Enter your number here."
+  end
+  
+  def character_details(char)
+    puts ""
+    puts "_______#{char.name}_________"
   end
   
 end
+
+# @char_id = char_id
+#     @name = name
+#     @birthday = birthday
+#     @occupation = occupation
+#     @img = img
+#     @status = status
+#     @appearance = appearance
+#     @nickname = nickname
+#     @portrayed = portrayed
+#     @url = url
