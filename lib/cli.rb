@@ -3,9 +3,15 @@ class CLI
     API.new.call_api
     puts "Welcome to the Breaking Bad Character Finder!"
     input = gets.strip.to_i
-    list_characters(input)
     choose_a_character
+    list_characters(input)
     
+  end
+  
+  def choose_a_character
+    puts ""
+    puts "Please choose a character for additional information."
+    input = gets.strip.to_i
   end
   
   def list_characters(input)
@@ -13,12 +19,6 @@ class CLI
       puts "#{index}. #{char.name}"
       
     end
-  end
-  
-  def choose_a_character
-    puts ""
-    puts "Please choose a character for additional information."
-    input = gets.strip.to_i
   end
   
 end
